@@ -27,7 +27,7 @@ public class JdbcUtil {
 	//method to get the connection object.
 	public static Connection getConnection() throws FileNotFoundException, IOException, SQLException {
 		
-		String fileLoc= "F:\\Full Stack JAVA Developer Course\\Full Stack JAVA Developer Notes\\Projects\\Online Book Shop\\OnlineBookShop\\src\\in\\ineuron\\properties\\application.properties";
+		String fileLoc= "F:\\Full Stack JAVA Developer Course\\Full Stack JAVA Developer Notes\\ProjectsGitHub\\OnlineBookShop\\src\\in\\ineuron\\properties\\application.properties";
 	
 		FileInputStream fis=new FileInputStream(fileLoc);
 		Properties properties=new Properties();

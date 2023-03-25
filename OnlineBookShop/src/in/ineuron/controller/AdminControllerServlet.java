@@ -383,7 +383,7 @@ public class AdminControllerServlet extends HttpServlet {
 
 				// sending the DTO object to service layer.
 				String status = userService.addBook(admin);
-
+				System.out.println("succcess");
 				// getting the final message and showing that to a suitable page.
 				if (status.equals("success")) {
 					session.setAttribute("message", "done");
