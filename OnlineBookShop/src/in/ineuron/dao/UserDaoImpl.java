@@ -336,7 +336,7 @@ public class UserDaoImpl implements IUserDao {
 
 		// select query for selecting New books from the database.
 		String sqlSelectQuery = "select book_id,book_name,book_author,book_price,book_category,book_image from books_data where book_category=?";
-		List<Admin> arrayList = null;
+		List<Admin> arrayList = new ArrayList<Admin>();
 		Admin admin = null;
 
 		try {
@@ -356,7 +356,7 @@ public class UserDaoImpl implements IUserDao {
 
 			if (resultSet != null) {
 
-				arrayList = new ArrayList<Admin>();
+				/* arrayList = new ArrayList<Admin>(); */
 
 				int i = 1;
 				while (resultSet.next() && i <= 4) {
@@ -391,7 +391,7 @@ public class UserDaoImpl implements IUserDao {
 	public List<Admin> getOldBooks() {
 		// select query for selecting New books from the database.
 		String sqlSelectQuery = "select book_id,book_name,book_author,book_price,book_category,book_image from books_data where book_category=?";
-		List<Admin> arrayList = null;
+		List<Admin> arrayList = new ArrayList<Admin>();
 		Admin admin = null;
 
 		try {
@@ -411,7 +411,7 @@ public class UserDaoImpl implements IUserDao {
 
 			if (resultSet != null) {
 
-				arrayList = new ArrayList<Admin>();
+				/* arrayList = new ArrayList<Admin>(); */
 
 				int i = 1;
 				while (resultSet.next() && i <= 4) {
@@ -447,7 +447,7 @@ public class UserDaoImpl implements IUserDao {
 
 		// select query for selecting recent books from the database.
 		String sqlSelectQuery = "select book_id,book_name,book_author,book_price,book_category,book_image from books_data";
-		List<Admin> arrayList = null;
+		List<Admin> arrayList = new ArrayList<Admin>();
 		Admin admin = null;
 
 		try {
@@ -467,7 +467,7 @@ public class UserDaoImpl implements IUserDao {
 
 			if (resultSet != null) {
 
-				arrayList = new ArrayList<Admin>();
+				/* arrayList = new ArrayList<Admin>(); */
 
 				resultSet.afterLast();
 
@@ -543,7 +543,7 @@ public class UserDaoImpl implements IUserDao {
 	public List<Admin> viewCart(int id) {
 		// select query for selecting the books added to the cart.
 		String sqlSelectQuery = "select cart_id,book_id,user_id,book_name,book_author,book_price from cart_data where user_id=?";
-		List<Admin> arrayList = null;
+		List<Admin> arrayList = new ArrayList<Admin>();
 		Admin admin = null;
 		Double total_price = 0.0;
 
@@ -564,7 +564,7 @@ public class UserDaoImpl implements IUserDao {
 
 			if (resultSet != null) {
 
-				arrayList = new ArrayList<Admin>();
+				/* arrayList = new ArrayList<Admin>(); */
 
 				while (resultSet.next()) {
 
@@ -874,7 +874,7 @@ public class UserDaoImpl implements IUserDao {
 
 		// select query for getting the orders.
 		String sqlSelectQuery = "select order_id,user_name,book_name,book_author,book_price,payment_type from order_data where user_id=?";
-		List<Admin> arrayList = null;
+		List<Admin> arrayList = new ArrayList<Admin>();
 		Admin admin = null;
 
 		try {
@@ -894,7 +894,7 @@ public class UserDaoImpl implements IUserDao {
 
 			if (resultSet != null) {
 
-				arrayList = new ArrayList<Admin>();
+				/* arrayList = new ArrayList<Admin>(); */
 
 				while (resultSet.next()) {
 
