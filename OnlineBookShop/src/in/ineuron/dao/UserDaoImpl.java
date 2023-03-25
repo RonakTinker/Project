@@ -283,7 +283,7 @@ public class UserDaoImpl implements IUserDao {
 
 		// select query for selecting all books from the database.
 		String sqlSelectQuery = "select book_id,book_name,book_author,book_price,book_category,book_image from books_data";
-		List<Admin> arrayList = null;
+		List<Admin> arrayList = new ArrayList<Admin>();
 		Admin admin = null;
 
 		try {
@@ -302,7 +302,7 @@ public class UserDaoImpl implements IUserDao {
 
 			if (resultSet != null) {
 
-				arrayList = new ArrayList<Admin>();
+				/* arrayList = new ArrayList<Admin>(); */
 
 				while (resultSet.next()) {
 
