@@ -98,13 +98,13 @@ public class UserDaoImpl implements IUserDao {
 			}
 
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return null;
@@ -675,96 +675,6 @@ public class UserDaoImpl implements IUserDao {
 		return "failure";
 	}
 
-//	// method to get the books data which are for selling and published by user.
-//	public List<Admin> getMyBooks(int userId) {
-//		// select query for selecting the books added to the books data by user.
-//		String sqlSelectQuery = "select book_id,book_name,book_author,book_price,book_category,book_image, user_id from books_data where user_id=?";
-//		List<Admin> arrayList = null;
-//		Admin admin = null;
-//
-//		try {
-//			// getting the connection to database.
-//			connection = JdbcUtil.getConnection();
-//
-//			if (connection != null) {
-//				pstmt = connection.prepareStatement(sqlSelectQuery);
-//			}
-//
-//			if (pstmt != null) {
-//
-//				pstmt.setInt(1, userId);
-//				// executing the query
-//				resultSet = pstmt.executeQuery();
-//			}
-//
-//			if (resultSet != null) {
-//
-//				arrayList = new ArrayList<Admin>();
-//
-//				while (resultSet.next()) {
-//
-//					admin = new Admin();
-//					admin.setBook_id(resultSet.getInt(1));
-//					admin.setBook_name(resultSet.getString(2));
-//					admin.setBook_author(resultSet.getString(3));
-//					admin.setBook_price(resultSet.getString(4));
-//					admin.setBook_category(resultSet.getString(5));
-//					admin.setBook_image(resultSet.getString(6));
-//					admin.setUser_id(resultSet.getInt(7));
-//
-//					arrayList.add(admin);
-//
-//				}
-//
-//				return arrayList;
-//			}
-//
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//
-//		return arrayList;
-//	}
-//
-//	// logic to delete my book from books data
-//	public String deleteMyBook(int userId, int bookId) {
-//		// delete query for deleting my book from books data.
-//		String sqlDeleteQuery = "delete from books_data where user_id=? and book_id=? ";
-//
-//		try {
-//			// getting the connection to database.
-//			connection = JdbcUtil.getConnection();
-//
-//			if (connection != null) {
-//				pstmt = connection.prepareStatement(sqlDeleteQuery);
-//			}
-//
-//			if (pstmt != null) {
-//				// setting the id to pstmt.
-//				pstmt.setInt(1, userId);
-//				pstmt.setInt(2, bookId);
-//
-//				// executing the query
-//				int rowAffected = pstmt.executeUpdate();
-//
-//				if (rowAffected == 1) {
-//					return "success";
-//				}
-//			}
-//
-//		} catch (FileNotFoundException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
-//		return "failure";
-//	}
 
 	// logic to update the user's profile
 	public String editProfile(User user) {
